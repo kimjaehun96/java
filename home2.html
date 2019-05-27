@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <h1 class = "title1">움짤로 억떡계 올려요..?? </h1>
+    
+    
+    
+    <script>
+        
+        
+        function getRandomNumber(){
+            let i =1;
+            
+            let randomNumber = "rgb(" + Math.floor(Math.random() *255) + "," + Math.floor(Math.random() *255) + "," + Math.floor(Math.random() *255) + ")";
+            console.log(randomNumber);
+            return randomNumber;
+        }
+        function getRandomNumber2(){
+            let i =1;
+            
+            let randomNumber2 = "rgb(" + Math.floor(Math.random() *255) + "," + Math.floor(Math.random() *255) + "," + Math.floor(Math.random() *255) + ")";
+            console.log(randomNumber2);
+            return randomNumber2;
+        }
+                   
+        let title1 = document.querySelector('.title1');
+        let body = document.querySelector('body');
+
+        setInterval(function(){
+            title1.style.color = getRandomNumber();
+            body.style.backgroundColor = getRandomNumber2();
+        }, 1000)
+        
+    </script>
+    
+</body>
+</html>
+
