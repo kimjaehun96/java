@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="result">Enter or button</h1>
+    <h2 id="bar">_______________<h2>
+    <input type="text" id="input"> 
+    <input type="submit" id="submit" value="없애기">
+
+    <script>
+
+        let h1 = document.querySelector('h1');
+        let bar = document.querySelector('h2');
+        let input = document.getElementById('input')
+        let button = document.getElementById('submit');
+
+        console.log(h1,bar, input, button)
+        console.log(input.value)
+        button.addEventListener('click', clicked);
+        input.addEventListener('keydown', keydown);
+
+        function keydown(event){
+            if (event.keyCode == 13){
+                bar.textContent = input.value;
+                input.value = null;
+            }
+        }
+        function clicked(event){
+            bar.innerHTML = input.value;
+            input.value= null;
+        }
+
+        
+        
+        
+    </script>
+</body>
+</html>

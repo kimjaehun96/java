@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <!-- {% comment %} <h1 id="title">제목입니다</h1> {% endcomment %} -->
+    <h1> 운장이 형은 <i>바보</i>다</h1>
+<script>
+    //title이라는 변수에 h1 태그 할당
+    // let title = document.querySelector('#title')
+
+    // "title_style"라는 클래스를 yap에 추가하기
+    // title.classList.add("title_style");
+    //title.classList.toggle("title_style"); 있으면 없애고 없으면 만들고!
+
+    let h1 = document.querySelector('h1')
+
+    h1.innterHTML = '운장이는 <i>바보</i>다'
+    h1.textContent = '운장이는 <i>몽충이</i>다'
+    console.log(h1.innerHTML)
+
+    console.log(h1.textContent)
+</script>
+</body>
+</html>

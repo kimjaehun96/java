@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <div class="box">"운장이는 <i>몽총이</i>다"</div>
+    <button>아닐걸?</button> -->
+    <h1>내가 뭘 눌렀지?</h1>
+    <button>이건가?</button>
+    <button>요건가?</button>
+    <button>저건가?</button>
+    
+    <script>
+        let h1 = document.querySelector('h1')
+        let button = document.getElementsByTagName('button')
+        // for(let i =0; i<3; i++){button[i].addEventListener("click", function(){
+        //     button[i].textContent="요거지!";
+        //     console.log("good");
+
+        button.forEach(function(button) {
+            button.addEventListener("click", function() {
+                button.innerHTML ="찾았다!";
+            })
+        // })
+        
+        
+        function Yogurt(a){
+            button[a].textContent="요거지!";
+        };
+
+
+        // button.addEventListener("click", function(){
+        //     h1.innerHTML ="운장이는 <i>몽총이</i>다"
+        //     button.innerHTML="그거지!"    
+        // })
+
+
+
+
+        // let box= document.querySelector('.box')
+        // function getRandomNumber(){
+        //     let i =1;
+            
+        //     let randomNumber = "rgb(" + Math.floor(Math.random() *255) + "," + Math.floor(Math.random() *255) + "," + Math.floor(Math.random() *255) + ")";
+        //     console.log(randomNumber);
+        //     return randomNumber;
+        // }
+
+
+
+
+
+        // box.addEventListener('mouseover', function()
+        // {console.log("마우스가 올라갔다!");
+        // })
+
+        // box.addEventListener('mouseout', function(){
+        // console.log("마우스가 나갔다!");
+        // }) //이렇게 하면 안되고 마우스 효과 사용할 때는 hover사용!
+
+        
+
+    </script>
+</body>
+</html>

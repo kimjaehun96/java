@@ -8,17 +8,28 @@
 </head>
 <body>
     
- <h1>제목입니다</h1>
- <script>
- let h1 = document.querySelector('h1')
- h1.style.color = 'green'
- let body = document.querySelector('body')
- // 1000ms 마다, 함수 실행
- setInterval(function() {
- body.style.backgroundColor =
- (body.style.backgroundColor === 'red' ) ? 'blue' : 'red'
- },1000)
- </script>
+<h1>제목입니다</h1>
+<script>
+function getRandomColor() {
+    let number = "0123456789abcdef";
+    let randomColor ="#";
+    for (let i = 0; i<6; i++) {
+         randomColor += number[Math.floor(Math.random() *16)];}
+    return randomColor;
+    }
+}
+}
+let h1 = document.querySelector('h1')
+h1.style.color = 'green'
+let body = document.querySelector('body')
+
+
+// 1000ms 마다, 함수 실행
+setInterval(function() {
+body.style.backgroundColor =
+(body.style.backgroundColor === 'red' ) ? 'blue' : 'red'
+},1000)
+</script>
 </body> 
 </body>
 </html>

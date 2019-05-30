@@ -1,5 +1,10 @@
-h1{
+.title1{
     padding-top: 200px;
     text-align: center;
     font-size: 100px;
+    color : getRandomNumber();
+
+}
+body{
+    
 }

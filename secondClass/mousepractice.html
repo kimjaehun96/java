@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <div class="box">"운장이는 <i>몽총이</i>다"</div>
+    <button>아닐걸?</button> -->
+    <h1>내가 뭘 눌렀지?</h1>
+    <h2>이건가?</h2>
+    <h2>요건가?</h2>
+    <h2>저건가?</h2>
+    
+    <script>
+        let letters = document.querySelectorAll('h2')
+        //getElementsByclass 로 하면 배열에 저장되는 것이 아님. 따라서 forEach가 안 먹힘. querySelectorAll은 배열로 잡힘. 
+
+
+        letters.forEach(function(letter) {
+            letter.addEventListener("click", clicked)    })
+        
+        
+        function clicked(){
+            this.textContent="요거지!";
+        }
+
+
+        // button.addEventListener("click", function(){
+        //     h1.innerHTML ="운장이는 <i>몽총이</i>다"
+        //     button.innerHTML="그거지!"    
+        // })
+
+
+
+
+        // let box= document.querySelector('.box')
+        // function getRandomNumber(){
+        //     let i =1;
+            
+        //     let randomNumber = "rgb(" + Math.floor(Math.random() *255) + "," + Math.floor(Math.random() *255) + "," + Math.floor(Math.random() *255) + ")";
+        //     console.log(randomNumber);
+        //     return randomNumber;
+        // }
+
+
+
+
+
+        // box.addEventListener('mouseover', function()
+        // {console.log("마우스가 올라갔다!");
+        // })
+
+        // box.addEventListener('mouseout', function(){
+        // console.log("마우스가 나갔다!");
+        // }) //이렇게 하면 안되고 마우스 효과 사용할 때는 hover사용!
+
+        
+
+    </script>
+</body>
+</html>

@@ -22,24 +22,19 @@
             console.log(randomNumber);
             return randomNumber;
         }
-        function getRandomNumber2(){
-            let i =1;
-            
-            let randomNumber2 = "rgb(" + Math.floor(Math.random() *255) + "," + Math.floor(Math.random() *255) + "," + Math.floor(Math.random() *255) + ")";
-            console.log(randomNumber2);
-            return randomNumber2;
-        }
+        
                    
         let title1 = document.querySelector('.title1');
         let body = document.querySelector('body');
 
         setInterval(function(){
             title1.style.color = getRandomNumber();
-            body.style.backgroundColor = getRandomNumber2();
+            body.style.backgroundColor = getRandomNumber();
         }, 1000)
         
     </script>
-    
+    <!-- 굳이 인라인으로 쓰지 말고  -->
+    <!--  -->
 </body>
 </html>
 

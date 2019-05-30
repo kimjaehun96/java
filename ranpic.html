@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <a href="https://www.naver.com">네이버 가기 </a>
+    <img src = "https://picsum.photos/200/300" />
+
+    <script>
+        let link = document.querySelector('a')
+        let image= document.querySelector('img')
+
+        console.log(link.getAttribute('href'))
+        console.log(image.getAttribute('src'))
+
+        link.setAttribute("href", "https://www.google.com")
+        link.textContent = "구글로 가기"
+        image.setAttribute("src", "https://picsum.photos/300/400")
+    </script>
+</body>
+</html>

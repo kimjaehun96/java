@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>여기가 바뀔거예요</h1>
+    <h1 id="result">___________</h1>
+
+    <input type="text" id="input"/>
+
+    <script>
+    let result = document.querySelector('#result')
+    let input = document.querySelector('#input')
+
+    input.addEventListener('keydown', keydown)
+
+    
+    function keydown(event){
+        console.log(event)
+        // if(event.keyCode === 13){
+        //     result.innerHTML ="Enter를 눌렀네요!"
+        // }
+        // else if(event.keyCode === 17){
+        //     result.innerHTML ="Control를 눌렀네요!"
+        // }
+        // else if(event.keyCode === 18){
+        //     result.innerHTML ="Alt를 눌렀네요!"
+        // }
+        // else if(event.keyCode === 16){
+        //     result.innerHTML ="Shift를 눌렀네요!"
+        // }
+        // else{
+        //     result.innerHTML = "제대로 눌러라"
+        // }
+        switch(event.keyCode){
+            case (13):
+                result.innerHTML ="Enter를 눌렀네요!";
+                break;
+            case (17):
+                result.innerHTML ="Control를 눌렀네요!";
+                break;
+            case (18):
+                result.innerHTML ="Alt를 눌렀네요!";
+                break;
+            case (16):
+                result.innerHTML ="Shift를 눌렀네요!";
+                break;
+           
+            default:
+                result.innerHTML ="제대로 눌러라.";
+
+        }   
+    }
+    </script>
+</body>
+</html>
