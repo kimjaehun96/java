@@ -62,15 +62,22 @@
     // 각각의 div를 클릭하면, 클릭한 div와 바로 상위 div의 색깔이 각각, 파랑 / 빨강으로 바뀌게 해주세요
     let divs = document.querySelectorAll('div');
     divs.forEach(function(div) {
-      div.addEventListener('click', function(){
-      event.stopPropagation();
+      div.addEventListener('click', function(event){
+        event.stopPropagation();  //위치 크게 상관이 없음.
+      // event.preventDefault();
       div.style.backgroundColor = "red";
       div.parentElement.style.backgroundColor = "blue";
-      });
-    })
-    // function logEvent(event){
-    //   divs.style.color = "red";
-    //   div.parentNode.style.color = "blue";
+      //if (key) this.parentElement.style.backgroundColor ="hotpink";
+      })
+    });
+
+    // function parentColor(event){
+    //   event.stopPropagation();
+    //   event.preventDefault();
+    //   div.style.backgroundColor = "red";
+    //   div.parentElement.style.backgroundColor = "blue";
+      
+    //   this.removeEventListener('click',parentColor);
     // }
 
   </script>

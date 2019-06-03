@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <script
+        src="http://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous"
+      ></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>RandomDoggy</title>
+</head>
+<body>
+    <h2>댕댕이 나와라<h2>
+            <button type="button" class="btn btn-outline-success" id="button">누르면 짖는 개</button></br>
+    <img src="" alt="dogimg" id="dogimg">
+    <style>
+        body
+        {
+            text-align: center;
+        }
+        button
+        {
+            border-radius: 30%;
+            background-color: white;
+            border: 2px solid black;
+                    
+        }
+        h2{
+            font-family: "여기어때 잘난체"
+        }
+        img{
+            border-style: dashed;
+            width: 300px;
+            margin-top: 50px;
+            border-radius: 50px
+        }
+    </style>
+    <script>
+        
+        $('#button').click(function()
+            {
+            $.ajax({
+                url: "https://dog.ceo/api/breeds/image/random",
+                type: 'POST',
+                dataType:'json',
+                success: function(json)
+                    {
+                    let result = json.message
+                    console.log(result)
+                    $('#dogimg').prop('src', json.message)
+                    }
+
+                })
+
+
+            })
+    </script>
+</body>
+</html>

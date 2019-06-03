@@ -25,7 +25,7 @@
         input.addEventListener('keydown', keydown);
 
         function keydown(event){
-            if (event.keyCode == 13){
+            if (event.keyCode === 13){   //같다 연산자는 자바스크립트에서 3개! 그리고 &&input.value(빈 스트링은 false이므로 아무거나 있으면 true임.) 를 붙여놓으면 아무것도 안 쳐도 사라지지 않는다.
                 bar.textContent = input.value;
                 input.value = null;
             }
